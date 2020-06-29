@@ -1,3 +1,5 @@
-export let token : string = 'NzI2OTcwNjM2Nzg1OTQyNjA4.XvlIrw.DlaiuyQ6dvA3WGuHonpkIQNV8Ec';
-export let prefix : string = 'hmif';
+require("dotenv").config();
+
+export let token : string = process.env.TOKEN;
+export let prefix : string = process.env.PREFIX;
 export let owners : string[] = [];
