@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module" : "CommonJS",
         "target": "ES2018",
-        "outDir": "dist",
+        "outDir": "bot/dist",
         "lib" : [
             "ESNext",
             "ESNext.Array",
@@ -21,7 +21,7 @@
         "emitDecoratorMetadata": true
     },
     "include": [
-        "src/**/*"
+        "bot/src/**/*"
     ],
     "exclude": [
         "node_modules"
