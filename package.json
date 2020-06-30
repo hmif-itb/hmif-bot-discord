@@ -8,6 +8,7 @@
     "discord-akairo": "github:1Computer1/discord-akairo",
     "discord.js": "github:discordjs/discord.js",
     "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
     "typescript": "^3.9.5"
   },
   "devDependencies": {},
