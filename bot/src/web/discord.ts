@@ -11,7 +11,8 @@ client.on('ready', () => {
 export async function onboardUser(guildId: string, userId: string, assignedNickname: string) {
     const guild = client.guilds.resolve(guildId);
     const member = guild.members.resolve(userId);
+    const role = guild.roles.cache.find(role => role.name === assignedRole);
 
     await member.setNickname(assignedNickname);
-    await member.roles.add(assignedRole);
+    await member.roles.add(role);
 }
