@@ -1,5 +1,12 @@
-import { client } from '../bot';
-import { assignedRole } from '../config';
+import Discord from 'discord.js';
+import { assignedRole, token } from '../config';
+
+const client = new Discord.Client();
+client.login(token);
+
+client.on('ready', () => {
+    console.log("Web Discord Client is ready!");
+});
 
 export async function onboardUser(guildId: string, userId: string, assignedNickname: string) {
     const guild = client.guilds.resolve(guildId);

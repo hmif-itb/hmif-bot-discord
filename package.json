@@ -21,6 +21,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "ts-node bot/src/index.ts",
+    "start-bot": "ts-node bot/src/bot.ts",
+    "start-web": "ts-node bot/src/web/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
