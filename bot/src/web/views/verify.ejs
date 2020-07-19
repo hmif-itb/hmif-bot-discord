@@ -61,6 +61,7 @@
                 $(".profile-email").text(profile.getEmail());
 
                 idToken = googleUser.getAuthResponse().id_token;
+                $("#idtoken").val(idToken);
                 $("#confirm").show();
             } else {
                 $("#denied").show();
@@ -87,6 +88,7 @@
         }
 
         .main {
+            width: 100%;
             max-width: 500px;
             margin: 0 auto;
             margin-top: 16px;
@@ -143,6 +145,13 @@
                         </tr>
                     </table>
                 </div>
+            </div>
+            <div>
+                <form method="post">
+                    <input name="idToken" type="hidden" id="idtoken" />
+                    <input name="jwt" type="hidden" value="<%= token %>" />
+                    <button type="submit" class="btn btn-primary mt-4 btn-block">Lanjut!</button>
+                </form>
             </div>
         </div>
         <div id="denied" style="display: none">

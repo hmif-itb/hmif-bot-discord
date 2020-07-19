@@ -21,7 +21,8 @@
         "emitDecoratorMetadata": true
     },
     "include": [
-        "bot/src/**/*"
+        "bot/src/**/*",
+        "web/**/*"
     ],
     "exclude": [
         "node_modules"

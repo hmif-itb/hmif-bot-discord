@@ -1,5 +1,5 @@
-import {token, owners} from './config.js';
+import {token, owners} from './config';
 import BotClient from './client/botclient';
 
-const client : BotClient = new BotClient({token, owners});
+export const client : BotClient = new BotClient({token, owners});
 client.start();

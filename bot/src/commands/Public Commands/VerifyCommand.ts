@@ -1,6 +1,6 @@
 import {Command} from 'discord-akairo';
 import {Message, GuildMember, MessageEmbed} from 'discord.js';
-import {secretkey} from '../../config';
+import {secretkey, webBaseUrl} from '../../config';
 const jwt = require('jsonwebtoken');
 
 export default class VerifyCommand extends Command{
@@ -29,7 +29,7 @@ export default class VerifyCommand extends Command{
         jwt.sign({userId, guildId}, secretkey, {expiresIn : '1h'}, (err, generatedToken) => {
             token = generatedToken;
 
-            let link : string = "https://verifydiscord.hmif.tech/verify?token=" + token;
+            let link : string = `${webBaseUrl}/discord/verify?token=${token}`;
 
             let messageEmbed : MessageEmbed = new MessageEmbed()
                 .setColor('#f8c414')
