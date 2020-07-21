@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "module" : "CommonJS",
+        "target": "ES2018",
+        "outDir": "bot/dist",
+        "lib" : [
+            "ESNext",
+            "ESNext.Array",
+            "ESNext.AsyncIterable",
+            "ESNext.Intl",
+            "ESNext.BigInt",
+            "ESNext.Symbol",
+            "DOM"
+        ],
+        "sourceMap": false,
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "incremental": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": [
+        "bot/src/**/*",
+        "web/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
