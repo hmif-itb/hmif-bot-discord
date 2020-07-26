@@ -34,8 +34,8 @@ export default class CalendarCommand extends Command {
     }
 
     public async exec(message: Message): Promise<any> {
-        const guildId = message.guild.id;
-        const channelId = message.channel.id;
+        const guildId = message.guild ? message.guild.id : '';
+        const channelId = message.guild ? message.channel.id : '';
         const messageString = message.toString();
 
         const startDate = getStartDay(messageString)
